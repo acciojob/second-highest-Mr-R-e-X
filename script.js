@@ -1,13 +1,17 @@
 //your JS code here. If required.
-function secondHighest(arr) {
+function secondHighest() {
+	 const input = prompt("Enter comma-separated integers:");
+	const arr = input.split(',').map(Number);
 	if (arr.length <= 1) {
-        return -Infinity;
+        return undefined;
     }
     
-    arr.sort((a, b) => b - a);
+    const sortedArr =  arr.sort((a, b) => b - a);
     
-    if (arr[0] === arr[arr.length - 1]) {
-        return -Infinity;
+        if (sortedArr.length === 1) {
+        return undefined;
     } 
-    return arr[1];
+    return arr[1]; 
 }
+const result = secondHighest();
+alert(result); 
