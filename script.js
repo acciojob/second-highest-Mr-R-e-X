@@ -11,6 +11,12 @@ function secondHighest() {
         if (sortedArr.length === 1) {
         return undefined;
     } 
+	for(let i = 1; i < sortedArr.length; i++) {
+    if(sortedArr[i] !== sortedArr[0]) {
+        return sortedArr[i];
+    }
+}
+	
     return arr[1]; 
 }
 const result = secondHighest();
