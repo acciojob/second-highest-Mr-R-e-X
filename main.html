@@ -10,7 +10,15 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			 if (arr.length < 2 || new Set(arr).size === 1) {
+        return -Infinity;
+    }
+    
+    // Remove duplicates and sort the array in descending order
+    const sortedArr = [...new Set(arr)].sort((a, b) => b - a);
+    
+    // Return the second element, which is the second highest
+    return sortedArr[1];
 		}
 
 		function Main() {
