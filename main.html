@@ -9,13 +9,17 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
-			 if (arr.length < 2 || new Set(arr).size === 1) {
-        return -Infinity;
+			 if (arr.length < 2) {
+        return undefined;
     }
     
     // Remove duplicates and sort the array in descending order
     const sortedArr = [...new Set(arr)].sort((a, b) => b - a);
+    
+    // If all elements are the same, return undefined
+    if (sortedArr.length === 1 || sortedArr[0] === sortedArr[1]) {
+        return undefined;
+    }
     
     // Return the second element, which is the second highest
     return sortedArr[1];
