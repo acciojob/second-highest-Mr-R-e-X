@@ -8,7 +8,7 @@ function secondHighest() {
     
     const sortedArr = arr.sort((a, b) => b - a);
     
-    for(let i = 1; i < sortedArr.length; i++) {
+       for(let i = 1; i < sortedArr.length; i++) {
         if(sortedArr[i] !== sortedArr[0]) {
             return sortedArr[i];
         }
